@@ -1,0 +1,7 @@
+/dist
+/node_modules
+/npm-debug.log
+/coverage
+/report
+/bower_components
+/.nyc_output

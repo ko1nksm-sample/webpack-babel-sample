@@ -1,0 +1,31 @@
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+
+plugins:
+  - import    # eslint-plugin-import
+  - react     # eslint-plugin-react
+
+settings:
+  # eslint-import-resolver-webpack
+  # webpackの設定からモジュールのパスを解決する
+  # bowerを使用しないならば node (eslint-import-resolver-node) で良い
+  import/resolver: webpack
+  import/extensions: [".js", ".jsx"]
+  import/named: 2
+  import/namespace: 2
+  import/default: 2
+  import/export: 2
+
+rules:
+  import/no-unresolved: 2
+
+env:
+  browser: true
+  mocha: true
+  node: true
+
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
