@@ -14,9 +14,9 @@
     "cross-env": "^2.0.1",
     "css-loader": "^0.25.0",
     "eslint": "^3.5.0",
-    "eslint-import-resolver-webpack": "^0.5.1",
-    "eslint-plugin-import": "^1.14.0",
-    "eslint-plugin-react": "^6.2.1",
+    "eslint-import-resolver-webpack": "^0.6.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-react": "^6.2.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "jsdom": "^9.5.0",
     "json-loader": "^0.5.4",
@@ -29,7 +29,7 @@
     "mocha": "^3.0.2",
     "mocha-jsdom": "^1.1.0",
     "moment": "^2.15.0",
-    "node-sass": "^3.9.3",
+    "node-sass": "^3.10.0",
     "nyc": "^8.1.0",
     "phantomjs-prebuilt": "^2.1.12",
     "plato": "^1.7.0",
@@ -40,7 +40,7 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.1"
+    "webpack-dev-server": "^1.15.2"
   },
   "scripts": {
     "//": "npm install時に自動的にbower installを実行するため。bowerを使わない場合は不要",
