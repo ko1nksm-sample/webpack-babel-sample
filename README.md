@@ -9,7 +9,7 @@ npm + webpack + babel をベースとして開発に必要なものを揃えて�
 | タスクランナー         | npm                                       |
 | ビルド                 | webpack                                   |
 | 開発用ウェブサーバー   | webpack-dev-server                        |
-| トランスラパイラ       | babel (ES2015, JSX)                       |
+| トランスラパイラ       | babel (ES2015+, JSX)                      |
 | スタイルシート         | scss (node-sass = libsass)                |
 | パッケージ管理         | npm、bower(オプション)                    |
 | テストフレームワーク   | mocha + power-assert                      |
@@ -45,7 +45,7 @@ babelプラグインでpower-assertとカバレッジ用のコード変換も行
   * その他ローダー実行 (css-loader, sass-loader, style-loader, json-loader) ※オプション
   * bowerモジュールの結合処理 (webpack.ResolverPlugin) ※オプション
 2. babel実行 [設定ファイル: .babelrc]
-  * ES6変換 (babel-preset-es2015)
+  * ES6変換 (babel-preset-latest)
   * プロジェクトパス解決 (babel-plugin-module-resolver)
   * bowerモジュールのパス解決 (babel-plugin-resolve-bower-module) ※オプション
 
