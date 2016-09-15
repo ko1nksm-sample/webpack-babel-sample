@@ -38,8 +38,10 @@ module.exports = function (config) {
     }()),
 
     webpackMiddleware: {
+      noInfo: true,
       stats: {
-        chunks: false
+        chunks: false,
+        children: false
       }
     },
 
