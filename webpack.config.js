@@ -45,6 +45,7 @@ module.exports = {
     }),
   ],
   module: {
+    exprContextCritical: false, // https://github.com/power-assert-js/babel-plugin-espower/issues/14
     loaders: [
       {
         test: /\.jsx?$/,
