@@ -10,13 +10,19 @@ module.exports = {
   },
   resolve: {
     root: path.resolve(__dirname, './src'),
-    extensions: ['', '.js', '.jsx'],
+    extensions: [
+      '',
+      '.js',
+      '.jsx',  // JSX (React) を使用する場合のみ必要
+    ],
 
-    // bower_componentsはbowerを使用する時のみ必要
-    modulesDirectories: ['node_modules', 'bower_components']
+    modulesDirectories: [
+      'node_modules',
+      'bower_components', // bowerを使用する場合のみ必要
+    ]
   },
   plugins: [
-    // bowerパッケージのパス解決（bowerを使わない場合は不要）
+    // bowerパッケージのパス解決（bowerを使用する場合のみ必要）
     new webpack.ResolverPlugin(
       new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
     ),
@@ -58,16 +64,15 @@ module.exports = {
       }
     ]
   },
-  externals: [
+  externals: [  // ビルドで結合しないモジュール
     {
       'react': 'React',
       'react-dom': 'ReactDOM',
       'lodash': '_',
       'moment': 'moment'
     },
-    // bowerモジュールをexternalsする場合
-    // babel-plugin-resolve-bower-module (refer to .babelrc) によって
-    // 読み込みパスが変更されるために関数で処理する必要がある。
+    // bowerモジュールはabel-plugin-resolve-bower-module (refer to .babelrc) によって
+    // 読み込みパスが変更されるためにコールバック関数で処理する必要がある。
     function (context, request, callback) {
       // console.log(context + ' : ' + request);
       if (request.startsWith(path.resolve('bower_components/jquery/'))) {
