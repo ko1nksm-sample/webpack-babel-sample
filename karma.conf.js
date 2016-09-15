@@ -19,7 +19,14 @@ module.exports = function (config) {
     ],
 
     // list of files / patterns to load in the browser
-    files: ['spec/**/*_spec.js'],
+    files: [
+      'bower_components/jquery/dist/jquery.min.js',
+      'node_modules/lodash/lodash.min.js',
+      'node_modules/moment/min/moment.min.js',
+      'node_modules/react/dist/react.min.js',
+      'node_modules/react-dom/dist/react-dom.min.js',
+      'spec/**/*_spec.js'
+    ],
 
     // list of files to exclude
     exclude: [],
@@ -30,13 +37,7 @@ module.exports = function (config) {
       'spec/**/*_spec.js': ['webpack']
     },
 
-    webpack: (function () {
-      // テスト実行環境構築を楽にするために全ての依存モジュールを結合している
-      var conf = require('./webpack.config.js')
-      delete conf.externals
-      return conf
-    }()),
-
+    webpack: require('./webpack.config.js'),
     webpackMiddleware: {
       noInfo: true,
       stats: {
