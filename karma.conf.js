@@ -37,9 +37,15 @@ module.exports = function (config) {
       'spec/**/*_spec.js': ['webpack']
     },
 
-    webpack: require('./webpack.config.js'),
+    webpack: function() {
+      var conf = require('./webpack.config.js');
+      delete conf.entry;
+      delete conf.devtool;
+      return conf;
+    }(),
+
     webpackMiddleware: {
-      noInfo: true,
+      noInfo: false,
       stats: {
         chunks: false,
         children: false
