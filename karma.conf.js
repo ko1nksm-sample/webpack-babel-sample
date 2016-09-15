@@ -41,7 +41,6 @@ module.exports = function (config) {
     webpack: function() {
       var conf = require('./webpack.config.js');
       delete conf.entry;
-      delete conf.devtool;
       return conf;
     }(),
 
