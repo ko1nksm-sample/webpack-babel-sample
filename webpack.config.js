@@ -40,9 +40,10 @@ module.exports = {
     ]),
 
     // minify
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true, compress: { warnings: false }
-    }),
+    process.env.NODE_ENV === 'production' ?
+      new webpack.optimize.UglifyJsPlugin({
+        minimize: true, compress: { warnings: false }
+      }) : function() {},
   ],
   module: {
     exprContextCritical: false, // https://github.com/power-assert-js/babel-plugin-espower/issues/14
