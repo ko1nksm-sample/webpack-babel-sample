@@ -20,6 +20,7 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
+      "node_modules/power-assert/build/power-assert.js",
       'bower_components/jquery/dist/jquery.min.js',
       'node_modules/lodash/lodash.min.js',
       'node_modules/moment/min/moment.min.js',

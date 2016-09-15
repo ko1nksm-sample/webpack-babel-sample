@@ -71,7 +71,8 @@ module.exports = {
       'react': 'React',
       'react-dom': 'ReactDOM',
       'lodash': '_',
-      'moment': 'moment'
+      'moment': 'moment',
+      'power-assert': 'assert',
     },
     // bowerモジュールはabel-plugin-resolve-bower-module (refer to .babelrc) によって
     // 読み込みパスが変更されるためにコールバック関数で処理する必要がある。
