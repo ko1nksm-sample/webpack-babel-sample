@@ -53,7 +53,7 @@ babelプラグインでpower-assertとカバレッジ用のコード変換も行
 
 テストの場合は1を飛ばして「2. mocha実行」から開始
 
-1. nyc実行 [設定ファイル: package.json]
+1. nyc実行 [設定ファイル: .nycrc]
 2. mocha実行 [設定ファイル: mocha.opts]
   * babel実行 (--compilers js:babel-core/register)
   * instrument追加 (babel-plugin-istanbul)
@@ -125,7 +125,6 @@ babel-preset-power-assertはbabelのプラグインとして動作し、babelの
 
 参考 http://efcl.info/2016/04/14/espower-babel-is-deprecated/
 
+## 変更履歴
 
-
-
-
+* 2016-10-15 nycの設定をpackage.jsonから.nycrcに移動
