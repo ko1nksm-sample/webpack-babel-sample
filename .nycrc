@@ -1,0 +1,10 @@
+{
+  "//": "babel-plugin-istanbulでinstrumentを埋め込むのでnyc側は無効にする",
+  "instrument": false,
+  "sourceMap": false,
+  "reporter": [
+    "lcov",
+    "text",
+    "html"
+  ]
+}
